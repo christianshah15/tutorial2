@@ -23,6 +23,8 @@
       
   var markerLocation = [43.7304, -72.2887]; // Example marker coordinates
   var marker = L.marker(markerLocation).addTo(map);
+  var popupContent = '<h2>Marker Information</h2><p>This is a marker popup content. You can add text, images, and other HTML here.</p>';
+  marker.bindPopup(popupContent);
 }
   </script>
 </head>
