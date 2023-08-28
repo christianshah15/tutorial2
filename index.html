@@ -22,11 +22,21 @@
       });
       
       var markerLocation = [43.7304, -72.2887]; // Example marker coordinates
-      var marker = L.marker(markerLocation).addTo(map), {
+
+  // Create a custom icon for the marker
+  var customIcon = L.icon({
+    iconUrl: 'path/to/your/icon.png', // Replace with your icon's URL
+    iconSize: [32, 32], // Icon size in pixels
+    iconAnchor: [16, 32], // The point of the icon that corresponds to the marker's location
+    popupAnchor: [0, -32] // The point from which the popup should open relative to the iconAnchor
+  });
+
+  // Create the marker with the custom icon and title
+  var marker = L.marker(markerLocation, {
     icon: customIcon,
     title: 'Marker Title' // Replace with your desired title
   }).addTo(map);
-    }
+}
   </script>
 </head>
 <body onload="initialize()">
