@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Embedding a Web Map using Leaflet</title>
+    <title>Adding Markers and Pop-Ups to our maps</title>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/> 
 <style>
@@ -18,11 +18,13 @@
                 zoom: 15,
                 layers: OpenStreetMap_HOT
       })}
+    var markerLocation = [43.7034, -72.2887];
+    var marker =L.marker(markerLocation).addTo(map);
 </script>
   </head>
 
   <body onload="initialize()">
-    <h1>Embedding a Web Map using Leaflet</h1>
+    <h1>Adding Markers and Pop-Ups to our maps</h1>
     <div id="map"></div>
   </body>
 </html>
