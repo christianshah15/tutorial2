@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Embedding a Web Map using Leaflet</title>
@@ -21,11 +22,15 @@
         layers: OpenStreetMap_HOT
       });
       
-  var markerLocation = [43.7304, -72.2887]; // Example marker coordinates
-  var marker = L.marker(markerLocation).addTo(map);
-  var popupContent = '<h2>Marker Information</h2><p>This is a marker popup content. You can add text, images, and other HTML here.</p>';
-  marker.bindPopup(popupContent);
-}
+      var markerLocation = [43.7304, -72.2887]; // Example marker coordinates
+      var marker = L.marker(markerLocation).addTo(map);
+      
+      var imageUrl = 'https://upload.wikimedia.org/wikipedia/commons/c/c3/Dartmouth_College_campus_2007-10-20_34%2C_crop_1.jpg'; // Replace with your image URL
+      var imageHtml = '<img src="' + https://upload.wikimedia.org/wikipedia/commons/c/c3/Dartmouth_College_campus_2007-10-20_34%2C_crop_1.jpg + '" alt="Marker Image" width="200">';
+      
+      var popupContent = '<h2>Marker Information</h2><p>This is a marker popup content. You can add text, images, and other HTML here.</p>' + imageHtml;
+      marker.bindPopup(popupContent);
+    }
   </script>
 </head>
 <body onload="initialize()">
