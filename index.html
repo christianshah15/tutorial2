@@ -22,16 +22,6 @@
       });
       
       var markerLocation = [43.7304, -72.2887]; // Example marker coordinates
-
-  // Create a custom icon for the marker
-  var customIcon = L.icon({
-    iconUrl: 'https://seeklogo.com/images/D/dartmouth-college-shield-logo-2585B55EEA-seeklogo.com.png', // Replace with your icon's URL
-    iconSize: [20, 20], // Icon size in pixels
-    iconAnchor: [16, 32], // The point of the icon that corresponds to the marker's location
-    popupAnchor: [0, -32] // The point from which the popup should open relative to the iconAnchor
-  });
-
-  // Create the marker with the custom icon and title
   var marker = L.marker(markerLocation, {
     icon: customIcon,
     title: 'Marker Title' // Replace with your desired title
